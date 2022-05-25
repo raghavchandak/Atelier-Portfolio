@@ -1,0 +1,72 @@
+.info {
+  display: flex;
+  margin: 2rem 0 2rem 0;
+}
+
+.desc {
+  margin-left: 7rem;
+  margin-right: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-family: "Poiret One";
+  margin-top: 0.5rem;
+  color: #994823;
+  display: flex;
+}
+
+.about {
+  width: 55vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  line-height: 2rem;
+  font-family: "Poiret One";
+}
+
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.contactDetails {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.contactText {
+  /* font-weight: bold; */
+  font-size: 1.25rem;
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about {
+    width: 80vw;
+    margin-top: 2rem;
+  }
+}

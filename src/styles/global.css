@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(94, 94, 94);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.company-name > h6 {
+  margin-top: -5px;
+}
+
+.navbar-links {
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.navbar-links h4 {
+  margin-left: 15px;
+  padding-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+.options {
+  font-weight: bold;
+  font-family: "Poiret One";
+}
+
+.active {
+  font-weight: bold;
+}

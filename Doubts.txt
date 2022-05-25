@@ -1,0 +1,15 @@
+3) How to keep image same when hovering over text on projects page
+5) Make images in carousel fit in page
+6) Fix carousel on studio works page
+
+Navbar:
+Realignment when changing screen size
+
+Studio Work:
+Project realignment
+Hover issue
+Reduce writeup size when decreasing screen size
+Carousel Image centering
+Carousel sidebar image correction & scrolling
+Remove double scroller
+Fix thumbnail images
