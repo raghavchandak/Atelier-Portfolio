@@ -22,7 +22,7 @@
   color: white;
   background-color: rgba(94, 94, 94, 0.4);
   font-family: "Poiret One";
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .img {
@@ -49,7 +49,6 @@
 }
 
 .text:hover ~ .img {
-  transform: scale(1.05);
   opacity: 0.85;
   border-radius: 20px;
 }

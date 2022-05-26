@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   /* margin-top: 4rem; */
-  margin: 4rem 10rem;
+  margin: 4rem 10vw;
   flex-wrap: wrap;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .imageGrid {
-  margin: 2rem 10rem;
+  margin: 2rem 10vw;
   display: grid;
   gap: 2rem;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
@@ -30,18 +30,14 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .details {
-    margin: 4rem 10rem;
-  }
   .imageGrid {
     grid-template-columns: repeat(2, 1fr);
-    margin: 2rem;
+    margin: 10vw;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .imageGrid {
     grid-template-columns: 1fr;
-    margin: 2rem;
   }
 }

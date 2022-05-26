@@ -13,3 +13,7 @@ Carousel Image centering
 Carousel sidebar image correction & scrolling
 Remove double scroller
 Fix thumbnail images
+
+Why is image quality reducing
+
+Change carousel image with keyboard

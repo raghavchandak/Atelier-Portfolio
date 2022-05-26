@@ -35,11 +35,11 @@ export const query = graphql`
       nodes {
         title
         thumbnail {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: CONSTRAINED, quality: 100)
         }
         slug
         images {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

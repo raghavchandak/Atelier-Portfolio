@@ -118,10 +118,10 @@ export const query = graphql`
       nodes {
         images {
           id
-          gatsbyImageData
+          gatsbyImageData(quality: 100)
         }
         thumbnail {
-          gatsbyImageData
+          gatsbyImageData(quality: 100)
         }
         name
       }

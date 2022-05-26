@@ -66,7 +66,13 @@ export default function contactMe({ data }) {
                 className={styles.icon}
                 style={{ fontSize: "1.75rem", color: "#509CF7" }}
               />
-              <p className={styles.contactText}>poojachandak.05@gmail.com</p>
+              <a
+                href="mailto:poojachandak.05@gmail.com"
+                className={styles.contactText}
+                style={{ textDecoration: "underline" }}
+              >
+                poojachandak.05@gmail.com
+              </a>
             </div>
             <div className={styles.contactDetails}>
               <LinkedIn
@@ -98,7 +104,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "Contact_us.JPG" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, height: 500)
+        gatsbyImageData(layout: CONSTRAINED, height: 500, quality: 100)
       }
     }
   }

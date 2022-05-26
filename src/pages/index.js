@@ -47,7 +47,7 @@ export const query = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(quality: 100)
           id
         }
         id

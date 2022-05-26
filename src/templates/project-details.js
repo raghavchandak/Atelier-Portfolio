@@ -35,7 +35,7 @@ function ProjectDetails({ data }) {
 
   const customStyles = {
     overlay: {
-      height: "80vh",
+      height: "100vh",
       zIndex: 50,
     },
     content: {
@@ -44,8 +44,6 @@ function ProjectDetails({ data }) {
       left: "0",
       right: "0",
       bottom: "0",
-      height: "100vh",
-      widht: "100vw",
     },
   }
 
@@ -56,9 +54,6 @@ function ProjectDetails({ data }) {
         style={{ overflow: open ? "hidden" : "none" }}
       >
         <h1 className={styles.title}>{data.contentfulProject.title}</h1>
-        {/* <p className={styles.desc}>
-          {data.contentfulProject.description.description}
-        </p> */}
       </div>
       <div className={styles.imageGrid}>
         {data.contentfulProject.images.map((i, key) => {
@@ -83,11 +78,7 @@ function ProjectDetails({ data }) {
             <Carousel
               autoPlay={false}
               navButtonsAlwaysVisible={true}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              style={{ backgroundColor: "red" }}
             >
               {images.map(i => {
                 let img = getImage(i)

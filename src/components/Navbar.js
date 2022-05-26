@@ -2,6 +2,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import React from "react"
 import "../styles/global.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import MenuIcon from "@mui/icons-material/Menu"
 
 export default function Navbar() {
   const data = useStaticQuery(graphql`
@@ -58,6 +59,7 @@ export default function Navbar() {
           <h4 className="options">About Us</h4>
         </Link>
       </div>
+      {/* <MenuIcon className="icon" /> */}
     </div>
   )
 }
