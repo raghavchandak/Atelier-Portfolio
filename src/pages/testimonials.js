@@ -45,7 +45,13 @@ export const query = graphql`
           testimonial
         }
         image {
-          gatsbyImageData(width: 200, height: 200, quality: 100)
+          gatsbyImageData(
+            width: 200
+            height: 200
+            quality: 100
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }

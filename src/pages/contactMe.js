@@ -104,7 +104,14 @@ export const query = graphql`
     }
     file(relativePath: { eq: "Contact_us.JPG" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, height: 500, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          height: 500
+          quality: 100
+          width: 1000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

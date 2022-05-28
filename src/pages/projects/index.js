@@ -18,9 +18,7 @@ export default function index({ data }) {
                 objectFit="contain"
                 className={styles.img}
               />
-              <h1 className={styles.text}>
-                {project.title}
-              </h1>
+              <h1 className={styles.text}>{project.title}</h1>
             </Link>
           )
         })}
@@ -35,11 +33,23 @@ export const query = graphql`
       nodes {
         title
         thumbnail {
-          gatsbyImageData(layout: CONSTRAINED, quality: 100)
+          gatsbyImageData(
+            layout: CONSTRAINED
+            quality: 100
+            width: 1000
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
         slug
         images {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            width: 1000
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }

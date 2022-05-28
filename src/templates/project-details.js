@@ -75,10 +75,7 @@ function ProjectDetails({ data }) {
               style={{ position: "absolute", top: 20, right: 20, zIndex: 5 }}
               onClick={() => handleClose()}
             />
-            <Carousel
-              autoPlay={false}
-              navButtonsAlwaysVisible={true}
-            >
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {images.map(i => {
                 let img = getImage(i)
                 return (
@@ -103,7 +100,14 @@ export const query = graphql`
       slug
       title
       images {
-        gatsbyImageData(aspectRatio: 1.78, height: 650, quality: 100)
+        gatsbyImageData(
+          aspectRatio: 1.78
+          height: 650
+          quality: 100
+          width: 1000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
