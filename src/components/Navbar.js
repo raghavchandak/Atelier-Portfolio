@@ -29,18 +29,6 @@ export default function Navbar() {
   }
 
   const [toggle, setToggle] = useState(false)
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-
-    window.addEventListener("resize", changeWidth)
-    return () => {
-      window.removeEventListener("resize", changeWidth)
-    }
-  }, [])
 
   const image = getImage(data.file.childImageSharp)
 
@@ -77,7 +65,7 @@ export default function Navbar() {
           onClick={() => setToggle(!toggle)}
         />
       </div>
-      {(toggle || screenWidth > 700) && (
+      {toggle && (
         <div className="vertical-nav">
           <Link to="/projects" className="link" activeStyle={activeStyle}>
             <h4 className="options">Project Gallery</h4>
