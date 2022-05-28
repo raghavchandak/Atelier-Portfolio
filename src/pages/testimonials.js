@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import * as styles from "../styles/testimonials.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const colors = ["rgb(135,206,235)", "rgba(244,194,194,0.8)", "blue"]
+const colors = ["rgb(135,206,235)", "rgba(244,194,194,0.8)", "rgb(144,238,144)"]
 
 export default function testimonial({ data }) {
   return (
@@ -38,7 +38,7 @@ export default function testimonial({ data }) {
 
 export const query = graphql`
   query Testimonials {
-    allContentfulTestimonial(sort: { order: ASC, fields: contentful_id }) {
+    allContentfulTestimonial(sort: { order: ASC, fields: order }) {
       nodes {
         name
         testimonial {

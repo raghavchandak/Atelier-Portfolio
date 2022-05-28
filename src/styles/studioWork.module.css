@@ -1,58 +1,88 @@
 .projects {
-  max-width: 90vw;
+  max-width: 95vw;
   margin: 0 auto;
   display: grid;
-  grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr;
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
   position: relative;
+  max-height: 90vh;
+  gap: 1.5rem;
 }
 
 .card {
   color: white;
   position: relative;
+  transition: all 0.15s;
 }
 
 .img {
   justify-content: center;
   display: flex;
-  /* height: 70vh; */
+  object-fit: contain;
 }
 
 .text {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* bottom: -10; */
   visibility: hidden;
   color: white;
   background-color: rgba(94, 94, 94, 0.4);
-  /* border-radius: 20px; */
   font-family: "Poiret One";
+  font-size: 2vw;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .text {
+  transition: 0.2s;
+  visibility: visible;
+  top: 50%;
+  opacity: 1;
+}
+
+.card:hover .img {
+  opacity: 0.85;
+  border-radius: 20px;
+}
+
+.text:hover {
+  visibility: visible;
+}
+
+.text:hover ~ .img {
+  opacity: 0.85;
+  border-radius: 20px;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 1rem;
-  /* align-items: center; */
+  display: flex;
+  position: relative;
+  height: 90vh;
+}
+
+.carousel {
+  flex: 0.75;
+  height: 90vh;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.carouselImg {
+  width: 90vw !important;
+  height: 90vh !important;
 }
 
 .sideImages {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
-  overflow-y: auto;
-}
-
-.carousel {
-  background-color: red;
-  /* display: flex; */
-  /* align-items: center; */
-  height: 90vh;
-  /* position: fixed; */
-  justify-content: center;
-  flex: 1;
+  overflow-y: scroll;
+  flex: 0.25;
+  margin-top: 2rem;
 }

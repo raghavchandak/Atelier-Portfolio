@@ -78,7 +78,6 @@ function ProjectDetails({ data }) {
             <Carousel
               autoPlay={false}
               navButtonsAlwaysVisible={true}
-              style={{ backgroundColor: "red" }}
             >
               {images.map(i => {
                 let img = getImage(i)

@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import React, { useState } from "react"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import * as styles from "../styles/projects.module.css"
+import * as styles from "../styles/studioWork.module.css"
 import Carousel from "react-material-ui-carousel"
 import Modal from "react-modal"
 import CloseIcon from "@mui/icons-material/Close"
@@ -27,7 +27,7 @@ function StudioWork({ data }) {
 
   const customStyles = {
     overlay: {
-      height: "80vh",
+      height: "90vh",
       zIndex: 50,
     },
     content: {
@@ -37,7 +37,6 @@ function StudioWork({ data }) {
       right: "0",
       bottom: "0",
       height: "100vh",
-      widht: "100vw",
     },
   }
 
@@ -45,13 +44,13 @@ function StudioWork({ data }) {
     <Layout>
       <div
         className={styles.projects}
-        style={{ overflow: open ? "hidden" : "none" }}
+        style={{ display: open ? "none" : "grid" }}
       >
         {data.allContentfulStudioWork.nodes.map((work, index) => {
           imageGallery.push(work.images)
           let thumbImage = getImage(work.thumbnail)
           return (
-            <div>
+            <div className={styles.card}>
               <GatsbyImage
                 image={thumbImage}
                 alt="Project Image"
@@ -59,9 +58,7 @@ function StudioWork({ data }) {
                 className={styles.img}
                 onClick={() => handleOpen(index)}
               />
-              <h1 className={styles.text}>
-                {work.name}
-              </h1>
+              <h1 className={styles.text}>{work.name}</h1>
             </div>
           )
         })}
@@ -81,8 +78,15 @@ function StudioWork({ data }) {
                   {imageGallery[selectedIndex].map(i => {
                     let img = getImage(i)
                     return (
-                      <div className={styles.img}>
-                        <GatsbyImage image={img} alt="" objectFit="contain" />
+                      <div
+                        style={{ display: "flex", justifyContent: "center" }}
+                      >
+                        <GatsbyImage
+                          image={img}
+                          alt=""
+                          objectFit="contain"
+                          className={styles.carouselImg}
+                        />
                       </div>
                     )
                   })}
@@ -92,13 +96,14 @@ function StudioWork({ data }) {
                 {imageGallery[selectedIndex].map((img, index) => {
                   let galleryImage = getImage(img)
                   return (
-                    <GatsbyImage
-                      image={galleryImage}
-                      alt="Gallery Image"
-                      objectFit="fill"
-                      style={{ height: "20rem" }}
-                      onClick={() => setShowIndex(index)}
-                    />
+                    <div style={{ marginBottom: "1vh" }}>
+                      <GatsbyImage
+                        image={galleryImage}
+                        alt="Gallery Image"
+                        objectFit="contain"
+                        onClick={() => setShowIndex(index)}
+                      />
+                    </div>
                   )
                 })}
               </div>
