@@ -108,7 +108,6 @@ export const query = graphql`
           layout: CONSTRAINED
           height: 500
           quality: 100
-          width: 1000
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
