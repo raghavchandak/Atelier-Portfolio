@@ -24,12 +24,23 @@
 @media only screen and (max-width: 800px) {
   .testimonial {
     flex-wrap: wrap;
+    margin-top: 1rem;
   }
   .card {
     margin: 0;
     margin-top: 2rem;
   }
-  .writeUp{
+  .writeUp {
     font-size: medium;
+  }
+  .clientImg {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-top: 2rem;
+  }
+  .clientImg:nth-child(1) {
+    margin-top: 0;
   }
 }

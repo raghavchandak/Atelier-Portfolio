@@ -21,6 +21,7 @@ export default function testimonial({ data }) {
               alt="Client"
               objectFit="cover"
               style={{ borderRadius: "50%" }}
+              className={styles.clientImg}
             />
             <div
               className={styles.card}
