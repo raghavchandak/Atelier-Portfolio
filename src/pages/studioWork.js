@@ -50,13 +50,12 @@ function StudioWork({ data }) {
           imageGallery.push(work.images)
           let thumbImage = getImage(work.thumbnail)
           return (
-            <div className={styles.card}>
+            <div className={styles.card} onClick={() => handleOpen(index)}>
               <GatsbyImage
                 image={thumbImage}
                 alt="Project Image"
                 objectFit="contain"
                 className={styles.img}
-                onClick={() => handleOpen(index)}
               />
               <h1 className={styles.text}>{work.name}</h1>
             </div>
@@ -74,6 +73,7 @@ function StudioWork({ data }) {
                   autoPlay={false}
                   navButtonsAlwaysVisible={true}
                   index={showIndex}
+                  swipe={false}
                 >
                   {imageGallery[selectedIndex].map(i => {
                     let img = getImage(i)
@@ -119,7 +119,7 @@ export default StudioWork
 
 export const query = graphql`
   query StudioWorks {
-    allContentfulStudioWork {
+    allContentfulStudioWork(sort: { order: ASC, fields: order }) {
       nodes {
         images {
           id

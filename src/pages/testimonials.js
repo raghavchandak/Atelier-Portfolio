@@ -27,7 +27,7 @@ export default function testimonial({ data }) {
               style={{ backgroundColor: colors[index % 3] }}
             >
               <h2 className={styles.client}>{testimonial.name}</h2>
-              <h3>{testimonial.testimonial.testimonial}</h3>
+              <h3 className={styles.writeUp}>{testimonial.testimonial.testimonial}</h3>
             </div>
           </div>
         )

@@ -4,6 +4,7 @@
   /* margin-top: 4rem; */
   margin: 4rem 10vw;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .title {
@@ -25,6 +26,8 @@
 .img {
   justify-content: center;
   display: flex;
+  height: 85vh;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -38,4 +41,8 @@
   .imageGrid {
     grid-template-columns: 1fr;
   }
+}
+
+.projectImage:hover {
+  cursor: pointer;
 }

@@ -7,7 +7,6 @@
 }
 
 .card {
-  background-color: rgba(94, 94, 94, 0.6);
   border-radius: 10px;
   padding: 2rem;
   margin: 2rem;
@@ -25,5 +24,12 @@
 @media only screen and (max-width: 800px) {
   .testimonial {
     flex-wrap: wrap;
+  }
+  .card {
+    margin: 0;
+    margin-top: 2rem;
+  }
+  .writeUp{
+    font-size: medium;
   }
 }

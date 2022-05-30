@@ -40,6 +40,16 @@ module.exports = {
         accessToken: `2zIDsArEDWMIxSpSzc_lgkHOPBKf7Jpv3Tq5MrtMa20`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Atelier Portfolio`,
+        short_name: `Atelier`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: 'src/images/Logo.png'
+      },
+    },
   ],
   siteMetadata: {
     title: "Atelier",

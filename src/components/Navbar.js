@@ -32,6 +32,12 @@ export default function Navbar() {
 
   const image = getImage(data.file.childImageSharp)
 
+  const handleClick = () => {
+    document.body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+    setToggle(!toggle)
+  }
+
   return (
     <div>
       <div className="navbar">
@@ -62,7 +68,7 @@ export default function Navbar() {
         <MenuIcon
           className="icon"
           fontSize="large"
-          onClick={() => setToggle(!toggle)}
+          onClick={handleClick}
         />
       </div>
       {toggle && (

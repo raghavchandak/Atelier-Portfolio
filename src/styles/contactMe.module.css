@@ -69,4 +69,7 @@
     width: 80vw;
     margin-top: 2rem;
   }
+  .text{
+    font-size: 1rem;
+  }
 }

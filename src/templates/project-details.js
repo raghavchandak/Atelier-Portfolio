@@ -59,7 +59,7 @@ function ProjectDetails({ data }) {
         {data.contentfulProject.images.map((i, key) => {
           const img = getImage(i)
           return (
-            <div>
+            <div className={styles.projectImage}>
               <GatsbyImage
                 image={img}
                 alt="Project image"
@@ -75,7 +75,11 @@ function ProjectDetails({ data }) {
               style={{ position: "absolute", top: 20, right: 20, zIndex: 5 }}
               onClick={() => handleClose()}
             />
-            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
+            <Carousel
+              autoPlay={false}
+              navButtonsAlwaysVisible={true}
+              swipe={false}
+            >
               {images.map(i => {
                 let img = getImage(i)
                 return (
