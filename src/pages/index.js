@@ -30,6 +30,7 @@ export default function Home({ data }) {
                     : styles.extra
                 }
                 objectPosition={imgWidth > 4000 ? "50% 50%" : "50% 0%"}
+                loading="eager"
               />
             )
           }
@@ -47,10 +48,7 @@ export const query = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(
-            quality: 100
-            placeholder: BLURRED
-          )
+          gatsbyImageData(quality: 90)
           id
         }
         id
