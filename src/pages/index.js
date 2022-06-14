@@ -14,23 +14,24 @@ export default function Home({ data }) {
             const imgWidth = homeimg.childImageSharp.gatsbyImageData.width
             const imgHeight = homeimg.childImageSharp.gatsbyImageData.height
 
+            console.log("w", imgWidth, "h", imgHeight)
+
             return (
               <GatsbyImage
                 image={newimg}
                 key={homeimg.childImageSharp.id}
                 alt=""
-                objectFit="cover"
                 className={
-                  imgWidth > 4000
+                  imgHeight == 675 || imgHeight == 661
                     ? styles.big
-                    : imgWidth > 260
-                    ? imgHeight == 4032
-                      ? styles.separate
-                      : styles.small
-                    : styles.extra
+                    : imgHeight > 15000
+                    ? styles.extra
+                    : imgHeight == 2133
+                    ? styles.separate
+                    : styles.small
                 }
-                objectPosition={imgWidth > 4000 ? "50% 50%" : "50% 0%"}
                 loading="eager"
+                objectFit="fill"
               />
             )
           }
@@ -48,7 +49,7 @@ export const query = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(quality: 90)
+          gatsbyImageData(quality: 90, width: 1200)
           id
         }
         id

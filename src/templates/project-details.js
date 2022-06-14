@@ -23,6 +23,7 @@ function ProjectDetails({ data }) {
   }
 
   const handleOpen = (i, index) => {
+    console.log("CLICKED")
     setSelectedImage(i)
     setCarouselArray(index)
     setOpen(true)
@@ -44,26 +45,28 @@ function ProjectDetails({ data }) {
       left: "0",
       right: "0",
       bottom: "0",
+      overflow: "hidden",
     },
   }
 
   return (
     <Layout>
-      <div
-        className={styles.details}
-        style={{ overflow: open ? "hidden" : "none" }}
-      >
+      <div className={styles.details}>
         <h1 className={styles.title}>{data.contentfulProject.title}</h1>
       </div>
-      <div className={styles.imageGrid}>
+      <div
+        className={styles.imageGrid}
+      >
         {data.contentfulProject.images.map((i, key) => {
           const img = getImage(i)
           return (
-            <div className={styles.projectImage}>
+            <div
+              className={styles.projectImage}
+              onClick={() => handleOpen(i, key)}
+            >
               <GatsbyImage
                 image={img}
                 alt="Project image"
-                onClick={() => handleOpen(i, key)}
                 objectFit="contain"
               />
             </div>
