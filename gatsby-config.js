@@ -11,7 +11,7 @@ module.exports = {
     "gatsby-plugin-image",
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    ` gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
